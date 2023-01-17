@@ -1,6 +1,5 @@
 <!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Email Subject</title>
     <meta name="referrer" content="never">
@@ -12,6 +11,8 @@
     <meta type="xrm/designer/setting" name="additional-fonts" datatype="font" value="Montserrat;Helvetica;Arial">
     <meta type="xrm/designer/setting" name="color" value="#00F000" datatype="color" label="Flash Green">
     <meta type="xrm/designer/setting" name="outer-background" value="#4d4d4d" datatype="color" label="Email Background">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <style>
         @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap );
 
@@ -50,16 +51,132 @@
         }
 
         @media screen and (max-width:480px) {
-            th.section {
+            td.section {
                 padding-left: 15px !important;
                 padding-right: 15px !important;
                 padding-top: 10px !important;
                 padding-bottom: 10px !important;
             }
 
+            td.inner {
+                text-align: left !important;
+            }
             table.social {
                 width: 480px !important;
             }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /* targets Apple Mail 13-14-15 Dark, iPad Gen 6-7, iPhone 11 & 11Pro Dark, iPhone 12 mini Dark, iPhone 12 Pro Max Dark, iPhone 13 & 13Pro Dark, iPhone 14 Dark &14Pro Max Dark  */
+
+            /* Shows Dark Mode-Only Content, Like Images */
+            .dark-img {
+                display: block !important;
+                width: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                max-height: inherit !important;
+                max-width: inherit !important;
+                line-height: auto !important;
+                margin-top: 0px !important;
+                visibility: inherit !important;
+            }
+
+            /* Hides Light Mode-Only Content, Like Images */
+            .light-img {
+                display: none;
+                display: none !important;
+            }
+
+            /* Custom Dark Mode Background Color */
+            .darkmode {
+                background-color: #363636 !important;
+            }
+
+            /* background color for OL Office 365 Dark (macOS 10.15) */
+
+            /* Custom Dark Mode Font Colors */
+            h1,
+            h2,
+            p,
+            span,
+            a,
+            b {
+                color: #f2f2f2 !important;
+            }
+
+            /* Custom Dark Mode Text Link Color */
+            /*  targets OL Office 365 Dark (macOS 10.15) */
+            .link {
+                color: #91ADD4 !important;
+            }
+
+            .darkmode-buttonColor { background-color: #f2f2f2 !important; }
+            .darkmode-buttonText { color: #000000 !important; }
+
+            .darkmode:not([class^="x_"]) {
+                background-color: #363636 !important;
+            }
+
+        }
+
+        _:-webkit-full-screen,
+        _::-webkit-full-page-media,
+        _:future,
+        :root body:not(.Singleton) .darkmode3 {
+            background-color: #363636 !important;
+        }
+
+
+
+        /* targets macOS and iOS specifically  */
+        [owa] .darkmode2 {
+            color: #00cc66 !important;
+        }
+
+        /* outlook specific */
+        /* Shows Dark Mode-Only Content, Like Images */
+        [data-ogsc] .dark-img {
+            display: block !important;
+            width: auto !important;
+            overflow: visible !important;
+            float: none !important;
+            max-height: inherit !important;
+            max-width: inherit !important;
+            line-height: auto !important;
+            margin-top: 0px !important;
+            visibility: inherit !important;
+        }
+
+        /* Hides Light Mode-Only Content, Like Images */
+        [data-ogsc] .light-img {
+            display: none;
+            display: none !important;
+        }
+
+        /* Custom Dark Mode Background Color */
+        [data-ogsc] .darkmode {
+            background-color: #363636 !important;
+        }
+
+        /* background color for Outlook.com Dark */
+
+        /* Custom Dark Mode Font Colors */
+        [data-ogsc] h1,
+        [data-ogsc] h2,
+        [data-ogsc] p,
+        [data-ogsc] span,
+        [data-ogsc] a,
+        [data-ogsc] b {
+            color: #f2f2f2 !important;
+        }
+
+        [data-ogsc] .darkmode-buttonText {color: #000000 !important; margin: 16px;}
+        [data-ogsc] .darkmode-buttonColor { background-color: #f2f2f2 !important; }
+
+        /* Custom Dark Mode Text Link Color */
+        [data-ogsc] .link {
+            color: #91ADD4 !important;
         }
 
         [data-layout="true"] {
@@ -70,11 +187,19 @@
                 /* @layout-max-width */
             ;
         }
-        
     </style>
-</head>
 
-<body><table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #010101;">
+    <!--[if gte mso 16]>
+    <style>
+        .keep-white {
+            mso-style-textfill-type:gradient;
+            mso-style-textfill-fill-gradientfill-stoplist:"0 \#FFFFFF 0 100000\,100000 \#FFFFFF 0 100000";
+            color:#000000 !important;
+        }
+    </style>
+    <![endif]-->
+
+    </head><body><table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #010101;">
         <tbody>
             <tr>
                 <td align="center">
@@ -90,11 +215,11 @@
             </tr>
         </tbody>
     </table><div data-layout="true" data-layout-version="v2" style="margin: auto; max-width: 640px;">
-        <div data-section="true" class="columns-equal-class wrap-section">
-            <table class="outer" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
+        <div data-section="true" class="columns-equal-class wrap-section darkmode">
+            <table class="outer darkmode3" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
                 <tbody>
                     <tr>
-                        <th>
+                        <th class="darkmode">
                             <table style="width: 100%; border-collapse: collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
@@ -120,33 +245,35 @@
                 </tbody>
             </table>
         </div>
-        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="background-color: rgb(254, 254, 254);">
-            <table class="outer" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
+        <div data-section="true" class="emptyContainer columns-equal-class wrap-section darkmode" style="background-color: rgb(254, 254, 254);">
+            <table class="outer darkmode3" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
                 <tbody>
                     <tr>
-                        <th class="section" style="padding: 20px 60px 60px; background-color: rgb(254, 254, 254);">
+                        <td class="section darkmode" style="padding: 20px 60px 60px; background-color: rgb(254, 254, 254);">
                             <table style="width: 100%;border-collapse: collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
-                                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align: top; min-width: 5px; width: 520px; height: 0px;" id="containerbfecdd72a534f1667919248296">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                        <td data-container="true" class="columnContainer" data-container-width="100" style="vertical-align: top; min-width: 5px; width: 520px; height: 0px;" id="containerbfecdd72a534f1667919248296">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; font-weight: normal;">
+                                                        <td class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word;">
                                                             <div data-editorblocktype="Text">
                                                                 <h1><strong><span style="font-family: 'Montserrat', Helvetica, sans-serif; font-size:28px;line-height:32px;color:#000000;">NielsenIQ General Communications</span></strong>
                                                                 </h1>
                                                             </div>
                                                             <div data-editorblocktype="Text" style="margin-top: 16px;">
-                                                                <p style="font-family: 'Montserrat', Helvetica, sans-serif; font-size:16px;line-height:26px;color:#000000;">Are you capturing 78% of the market or are you
+                                                                <p style="font-family: 'Montserrat', Helvetica, sans-serif; font-size:16px;line-height:26px;color:#000000;">
+                                                                    Are you capturing 78% of the market or are you
                                                                     missing? Should you double-down on sustainable
                                                                     packaging? Regenerative farming? Social
                                                                     responsibility efforts? How are you stacking against
                                                                     your competitors' sustainability initiatives?</p>
                                                             </div>
                                                             <div data-editorblocktype="Text" style="margin-top: 16px;">
-                                                                <p style="font-family: 'Montserrat', Helvetica, sans-serif; font-size:16px;line-height:26px;color:#000000;">Introducing the
-                                                                    <u><strong>Sustainability Report Pack</strong></u>.
+                                                                <p style="font-family: 'Montserrat', Helvetica, sans-serif; font-size:16px;line-height:26px;color:#000000;">
+                                                                    Introducing the
+                                                                     <u><strong><a href="###" class="link">Sustainability Report Pack</a></strong></u>.
                                                                     Our newest ad-hoc report bundle for brands that are
                                                                     changing the world through sustainability
                                                                     commitments.
@@ -154,65 +281,72 @@
                                                                     Single report options are available.
                                                                 </p>
                                                             </div>
-                                                            <div data-editorblocktype="Button" align="left" class="buttonWrapper" style="margin: 16px 0px 0px;"><a class="buttonClass" href="https://nielseniq.com/global/en/" style="text-align: center; margin-right: auto; margin-left: 0px; display: inline-block; text-decoration: none; background-color: rgb(0, 0, 0); border-radius: 1px; color: rgb(255, 255, 255); width: fit-content; height: auto; padding: 12px 32px; max-width: 100%; line-height: normal; border-color: rgb(255, 255, 255); border-width: 1px; border-style: none; font-size: 16px; mso-hide: none !important;" data-msdyn-tracking-id="636ba209649ca1667919548036"><span style="font-family: Verdana, Arial, sans-serif;font-weight:700;">Learn more</span></a></div>
-                                                        </th>
+                                                            <div data-editorblocktype="Button" align="left" class="buttonWrapper" style="margin: 16px 0px 0px;"><a class="buttonClass darkmode-buttonColor" href="https://nielseniq.com/global/en/" style="text-align: center; margin-right: auto; margin-left: 0px; display: inline-block; text-decoration: none; background-color: rgb(0, 0, 0); border-radius: 1px; color: rgb(255, 255, 255); width: fit-content; height: auto; padding: 12px 32px; max-width: 100%; line-height: normal; border-color: rgb(255, 255, 255); border-width: 2px; border-style: solid; font-size: 16px; mso-hide: none !important;" data-msdyn-tracking-id="636ba209649ca1667919548036"><span class="keep-white darkmode-buttonText" style="font-family: Verdana, Arial, sans-serif;font-weight:700;">Learn more</span></a></div>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </th>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </th>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="background-color: rgb(0, 0, 0);">
+        <div data-section="true" class="emptyContainer columns-equal-class no-wrap-section" style="background-color: rgb(0, 0, 0);">
             <table class="outer" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
                 <tbody>
                     <tr>
-                        <th class="section" style="background-color: rgb(0, 0, 0); padding: 20px 60px;">
+                        <td class="section" style="background-color: rgb(0, 0, 0); padding: 20px 60px;">
                             <table style="width: 100%;border-collapse: collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
-                                        <th data-container="true" class="columnContainer social" data-container-width="100" style="vertical-align: top; min-width: 5px; height: 0px; width: 520px;" id="containerc5c8927f57baf1667919660823">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                        <td data-container="true" class="columnContainer social" data-container-width="100" style="vertical-align: top; min-width: 5px; height: 0px; width: 520px; max-width: 100%;" id="containerc5c8927f57baf1667919660823">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; font-weight: normal;">
+                                                        <td class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word;">
                                                             <div data-editorblocktype="Text" style="margin-bottom: 16px;">
                                                                 <p><strong><span style="color:#ffffff;">Stay ahead by staying connected</span></strong>
                                                                 </p>
                                                             </div>
                                                             <table border="0" cellpadding="0" cellspacing="0">
-                                                                <tbody><tr>
-                                                                    <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
-                                                                        <a href="https://www.linkedin.com/company/nielseniq/"><img alt="LinkedIn" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/linkedin-white-bstroke-1.png" width="38" style="width: 38px; height: auto;">
-                                                                        </a></td>
-                                                                    <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
-                                                                        <a href="https://www.instagram.com/nielseniq/"><img alt="Instagram" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/instagram-white-bstroke.png" width="38" style="width: 38px; height: auto;">
-                                                                        </a></td>
-                                                                    <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
-                                                                        <a href="https://twitter.com/nielseniq"><img alt="Twitter" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/twitter-white-bstroke.png" width="38" style="width: 38px; height: auto;">
-                                                                        </a></td>
-                                                                    <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
-                                                                        <a href="https://www.youtube.com/channel/UCYgAtbXKtOHSPlF81g56c3w"><img alt="YouTube" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/youtube-white-bstroke.png" width="38" style="width: 38px; height: auto;">
-                                                                        </a></td>
-                                                                    <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
-                                                                        <a href="https://www.facebook.com/NielsenIQ.global"><img alt="Facebook" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/facebook-white-bstroke-1.png" width="38" style="width: 38px; height: auto;">
-                                                                        </a></td>
-                                                                </tr>
-                                                            </tbody></table>
-                                                        </th>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
+                                                                            <a href="https://www.linkedin.com/company/nielseniq/"><img alt="LinkedIn" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/linkedin-white-bstroke-1.png" width="38" style="width: 38px; height: auto;">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
+                                                                            <a href="https://www.instagram.com/nielseniq/"><img alt="Instagram" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/instagram-white-bstroke.png" width="38" style="width: 38px; height: auto;">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
+                                                                            <a href="https://twitter.com/nielseniq"><img alt="Twitter" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/twitter-white-bstroke.png" width="38" style="width: 38px; height: auto;">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
+                                                                            <a href="https://www.youtube.com/channel/UCYgAtbXKtOHSPlF81g56c3w"><img alt="YouTube" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/youtube-white-bstroke.png" width="38" style="width: 38px; height: auto;">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td width="70" style="line-height: 38px;mso-line-height-rule:at-least;">
+                                                                            <a href="https://www.facebook.com/NielsenIQ.global"><img alt="Facebook" src="https://microsites.nielsen.com/web-assets/wp-content/uploads/sites/10/2021/03/facebook-white-bstroke-1.png" width="38" style="width: 38px; height: auto;">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </th>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </th>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -221,15 +355,15 @@
             <table class="outer" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 640px; display: block;">
                 <tbody>
                     <tr>
-                        <th class="section" style="background-color: rgb(51, 51, 51); padding: 20px 60px;">
+                        <td class="section" style="background-color: rgb(51, 51, 51); padding: 20px 60px;">
                             <table style="width: 100%;border-collapse: collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
                                     <tr>
-                                        <th data-container="true" class="columnContainer" data-container-width="100" style="vertical-align: top; min-width: 5px; width: 520px; height: 0px;" id="container214baa5a35d071667919738393">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="height: 100%;">
+                                        <td data-container="true" class="columnContainer" data-container-width="100" style="vertical-align: top; min-width: 5px; width: 520px; height: 0px;" id="container214baa5a35d071667919738393">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; font-weight: normal;">
+                                                        <td class="inner" style="font-family: Montserrat, Helvetica, sans-serif; min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word;">
                                                             <div data-editorblocktype="Text">
                                                                 <p style="font-size: 16px;line-height: 26px;margin-bottom:0;">
                                                                     <span style="font-size:16px;"><a href="{{msdyncrm_contentsettings.msdyncrm_subscriptioncenter}}" data-msdyn-tracking="false" data-msdyn-tracking-id="1708d907-2ad7-4af3-85b6-d04939b7f726" style="text-decoration: none;"><span style="color:#ffffff;">Unsubscribe and email preferences</span></a></span>
@@ -240,20 +374,22 @@
                                                                 <p style="font-size: 16px;line-height: 26px;margin-bottom:0;">
                                                                     <span style="font-size:16px;"><a href="{{Message.ViewAsWebpageURL}}" data-msdyn-tracking="null" data-msdyn-tracking-id="7d914fc9-298f-478a-8765-e76342ef13d1" style="text-decoration: none;"><span style="color:#ffffff;">View as web page</span></a></span>
                                                                 </p>
+                                                                <p style="font-size: 16px; line-height: 26px; margin-bottom:0;">
+                                                                    <span style="font-size:16px;"><a href="{{msdyncrm_contentsettings(5750e1e2-deb6-ec11-983e-6045bd89effb).msdyncrm_forwardtoafriend}}" style="color: #ffffff;text-decoration: none;">Forward to a Friend</a></span>
+                                                                </p>
                                                                 <p style="font-size: 11px;line-height: 26px;margin-bottom:10px;">
-                                                                    <a href="https://niq.com/global/en/legal/privacy-policy/" data-msdyn-tracking="null" data-msdyn-tracking-id="f1d84d8e-cdd9-4dee-90da-a51f328719c3" style="text-decoration: none;"><span style="color:#ffffff;"><span style="font-size:16px;">Privacy policy</span></span></a><span style="color:#ffffff;">
-                                                                        <br><br><span style="font-size:11px;">Copyright @2022 Nielsen Consumer LLC. All Rights Reserved.</span></span>
+                                                                    <a href="https://niq.com/global/en/legal/privacy-policy/" data-msdyn-tracking="null" data-msdyn-tracking-id="f1d84d8e-cdd9-4dee-90da-a51f328719c3" style="text-decoration: none;"><span style="color:#ffffff;"><span style="font-size:16px;">Privacy policy</span></span></a><span style="color:#ffffff;"><br><br><span style="font-size:11px;">Copyright @2023 Nielsen Consumer LLC. All Rights Reserved.</span></span>
                                                                 </p>
                                                             </div>
-                                                        </th>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </th>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </th>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -266,16 +402,16 @@
                             <!-- Physical Address Footer -->
                             <div data-container="true" id="container79836840a9ed11635435918173" style="null; width: 640px; flex: 0 0 640px; display: flex; flex-direction: column;">
                                 <span style="font-size: 0px;">{{msdyncrm_contentsettings.msdyncrm_addressmain}}
-              <!-- Drag Here -->Insert Footer<!-- Drag Here --></span>
+                            <!-- Drag Here -->Insert Footer<!-- Drag Here --></span>
                             </div>
                             <!--table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #4d4d4d;" width="100%">
-            <tr>
-              <td class="footer-section" style="padding-left: 60px; padding-top: 20px; padding-bottom: 80px; padding-right: 60px;">
-              <p class="white-para" style="font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #ffffff;">200 West Jackson Boulevard Chicago, Illinois 60606<br>
-              <a href="https://nielseniq.com" style="color: #ffffff; text-decoration: none;">nielseniq.com</a></p>
-              </td>
-            </tr>
-          </table-->
+                        <tr>
+                            <td class="footer-section" style="padding-left: 60px; padding-top: 20px; padding-bottom: 80px; padding-right: 60px;">
+                            <p class="white-para" style="font-family: 'Montserrat', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 26px; color: #ffffff;">200 West Jackson Boulevard Chicago, Illinois 60606<br>
+                            <a href="https://nielseniq.com" style="color: #ffffff; text-decoration: none;">nielseniq.com</a></p>
+                            </td>
+                        </tr>
+                    </table-->
                         </td>
                     </tr>
                 </tbody>
